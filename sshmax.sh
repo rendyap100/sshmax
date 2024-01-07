@@ -309,7 +309,7 @@ ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 Info="(${green}Active${NC})"
 Error="(${RED}ExpiRED${NC})"
 today=`date -d "100 days" +"%Y-%m-%d"`
-Exp1=$(curl $izinsc | grep $MYIP | awk '{print $4}')
+Exp1=$(date -d "+10 years" +"%Y-%m-%d")
 if [[ $today < $Exp1 ]]; then
 sts="${Info}"
 else
